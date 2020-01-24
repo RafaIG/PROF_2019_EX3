@@ -1,19 +1,19 @@
 package es.upm.grise.profundizacion2019.ex3;
 
-// Modificacion para resolver fallos con la clase Time
+// 1 Modificacion para resolver fallos con la clase Time
+// 2 Anadimos dependencias
 
 public final class MyClass {
-	
+
 	private Time actualTime;
 
-	// Un constructor que inyecta la dependencia
 	public MyClass(final Time time) {
-		this.actualTime = time;
+		actualTime = time;
 	}
-	
+
 	public void nextTime(final long seconds) {
-		final String nextTime = actualTime.getFutureTime(seconds);
-		System.out.println(nextTime);
+		final String futureTime = actualTime.getFutureTime(seconds);
+		System.out.println(futureTime);
 	}
 
 }
